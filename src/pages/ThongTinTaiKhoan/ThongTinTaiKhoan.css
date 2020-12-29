@@ -1,0 +1,10 @@
+.images-profile{
+    margin-top: 40px;
+}
+.images-profile img{
+    border-radius: 50%;
+    
+}
+.nav-link{
+    cursor: pointer;
+}

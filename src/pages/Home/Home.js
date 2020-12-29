@@ -90,13 +90,7 @@ import { NavLink } from 'react-router-dom';
     }
     return (
         <div className="container">
-            {/* <button onClick={() => {
-                getFilm();
-            }}>Lấy danh sách phim</button>
-            <h3>Danh sách phim</h3>
-            <div className="row">
-                {renderPhim()}
-            </div> */}
+           
 
         </div>
     )

@@ -4,7 +4,8 @@ import './Header_Elearning.css'
 
 export default function Header_Elearning() {
     return (
-        <div>
+        <div className="hr">
+            
             <header className="header_content">
                 <nav className="navbar navbar-expand-lg navbar-light ">
                     <div className="col-sm-10 col-md-8 col-lg-9 col-xl-7">
@@ -13,7 +14,7 @@ export default function Header_Elearning() {
                                 <img src="../img/logocybersoft.png" /> CYBERSOFT
                             </NavLink>
 
-                            <span className="categories"><i className="fa fa-th" /><span className="deleteText" style={{color: '#3E1311'}}>Danh mục khóa học</span></span>
+                            <span className="categories"><i className="fa fa-th" /><NavLink to="/profile" className="deleteText" style={{color: '#3E1311'}}>Danh mục khóa học</NavLink></span>
                             <form className="header__form">
                                 <div className="input-group ">
                                     <input type="text" className="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="basic-addon2" />
@@ -28,17 +29,17 @@ export default function Header_Elearning() {
                         <div className="header__right">
                             <ul className="navbar-nav">
                                 <li class="nav-item business">
-                                    <a class="nav-link" href="#">Bài viết </a>
+                                    <a class="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank">Bài viết </a>
                                 </li>
                                 <li class="nav-item teach">
-                                    <a class="nav-link" href="#">Học online với cyberlearn.vn</a>
+                                    <a class="nav-link" href="https://cyberlearn.vn/" target="_blank">Học online với cyberlearn.vn</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#"><i className="fa fa-shopping-cart" /></a>
                                 </li>
                                 <li className="nav-item btn-groups">
-                                    <button className="ude-btnWhite">Log In</button>
-                                    <button className="ude-btnRed">Sign Up</button>
+                                    <NavLink to="/login" className="ude-btnWhite">Log In</NavLink>
+                                    <NavLink to="/signup" className="ude-btnRed">Sign Up</NavLink>
                                 </li>
                             </ul></div>
                     </div>

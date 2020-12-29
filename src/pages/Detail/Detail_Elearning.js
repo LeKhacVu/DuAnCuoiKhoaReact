@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import './Detail_Elearning.css'
 export default class Detail_Elearning extends Component {
     render() {
@@ -6,7 +7,7 @@ export default class Detail_Elearning extends Component {
             <div className="container-fluid">
                 <h3 className="title-detail">Tìm thấy 10 khóa học FrontEnd</h3>
                 <div className="detail-item">
-                    <div className="row style_detail">
+                    <NavLink to="/course" className="row style_detail">
                         <div className="col-3">
                             <img src="./img/kh4.jpg" />
                         </div>
@@ -30,7 +31,7 @@ export default class Detail_Elearning extends Component {
                                 <p>(95 học viên )</p>
                             </div>
                         </div>
-                    </div>
+                    </NavLink>
                 </div>
                 <div className="detail-item">
                     <div className="row style_detail">

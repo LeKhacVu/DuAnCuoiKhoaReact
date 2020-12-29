@@ -31,7 +31,7 @@ function App() {
         <Route exact path='/trangchu' component={TrangChu_Elearning} />
         <Route exact path='/profile' component={Profile_Elearning}/>
 
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={TrangChu_Elearning} />
         <Route exact path='*' component={PageNotFound} />
       </Switch>
       <Footer_Elearning/>

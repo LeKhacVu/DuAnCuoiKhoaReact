@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './Profile_Elearning.css'
 export default function Profile_Elearning() {
     return (
@@ -17,7 +18,7 @@ export default function Profile_Elearning() {
             <div>
             <div className="courses_item container">
                         <div className="rowCourse">
-                            <div className="card ">
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh1.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">An Entire MBA in 1 Course:Award Winning...</h4>
@@ -37,8 +38,8 @@ export default function Profile_Elearning() {
                                       <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh2.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Complete SQL Bootcamp 2020
@@ -59,8 +60,8 @@ export default function Profile_Elearning() {
                                         <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh3.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Complete Financial Analyst Course 2020
@@ -81,8 +82,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh4.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">PMP Exam Prep Seminar - PMBOK Guide 6
@@ -103,8 +104,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh5.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">Tableau 2020 A-Z: Hands-On Tableau </h4>
@@ -124,8 +125,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh6.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">Beginner to Pro in Excel: Financial Modeling
@@ -146,8 +147,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh9.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">An Entire MBA in 1 Course:Award Winning...
@@ -168,8 +169,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh8.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Ultimate Hands-On Hadoop - Tame your
@@ -190,8 +191,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh8.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Ultimate Hands-On Hadoop - Tame your
@@ -212,8 +213,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh8.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Ultimate Hands-On Hadoop - Tame your
@@ -234,8 +235,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh8.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Ultimate Hands-On Hadoop - Tame your
@@ -256,8 +257,8 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="card ">
+                            </NavLink>
+                            <NavLink to="/course" className="card ">
                                 <img className="card-img-top" src="./img/kh8.jpg" alt="Card image" />
                                 <div className="card-body">
                                     <h4 className="card-title">The Ultimate Hands-On Hadoop - Tame your
@@ -278,7 +279,7 @@ export default function Profile_Elearning() {
                                     <button>Đăng ký</button>
                                     </div>
                                 </div>
-                            </div>
+                            </NavLink>
                         </div>
                     </div>
             </div>

@@ -43,10 +43,14 @@
     background-color: rgba(225,184,0,0.8);
     border-color: rgba(225,184,0,0.8);
   }
+  .hr{
+    border-bottom:1px solid grey;
+  }
   
   .header_content {
     width: 95%;
     margin: 0 auto;
+    
   }
   
   .header_content .header__left {

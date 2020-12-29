@@ -28,7 +28,7 @@ export default function SignUp() {
                     </span>
                 </div>
                 <div className="form-label ">
-                    <span className="label-input">Repeat Password</span>
+                    <span className="label-input">Confirm Password</span>
                     <input className="input-1" type="password" name="password" placeholder="Enter Password" ></input>
                     <span className="focus-input">
                     </span>

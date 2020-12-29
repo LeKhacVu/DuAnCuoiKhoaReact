@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './Login_Elearning.css'
 
 export default function Login_Elearning() {
@@ -39,7 +40,9 @@ export default function Login_Elearning() {
                         <button className="login100-form-btn">
                             Login
                          </button>
+                        
                     </div>
+                    <NavLink to="/signup" style={{cursor:'pointer'}} className="mt-5">Create your Account<span><i class="fa fa-arrow-right ml-2"></i></span></NavLink>
 
 
                 </form>
