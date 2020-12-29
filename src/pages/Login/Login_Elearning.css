@@ -1,0 +1,255 @@
+    .login-elearning{
+        background-color: #ebeeef;
+        padding: 15px;
+    }
+
+    
+    .Form-Login {
+        width: 670px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        height: 600px;
+        margin: 0 auto;
+    }
+    
+    .login-form-title {
+        background-image: url("../../assets/bg-01.jpg");
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 70px 15px 74px 15px;
+        opacity: 0.8;
+    }
+    
+    .text-login {
+        font-size: 35px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .login-form {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 43px 88px 93px 190px;
+    }
+    
+    .form-label {
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid #b2b2b2;
+        margin-bottom: 26px;
+    }
+    
+    .login-form .form-label .label-input {
+        font-family: Poppins-Regular;
+        font-size: 19px;
+        color: #808080;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        top: 14px;
+        left: -105px;
+        width: 80px;
+    }
+    
+     ::placeholder {
+        opacity: 0.8;
+        color: grey;
+        font-size: 17px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        color: black;
+    }
+    
+    .focus-input {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+    
+    .focus-input::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        -webkit-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        transition: all 0.6s;
+        background: #57b846;
+        box-sizing: inherit;
+    }
+    
+    input:focus {
+        border-color: transparent !important;
+        border-bottom:1px solid #57b846 !important;
+    }
+   
+    .input-1 {
+        font-family: Poppins-Regular;
+        font-size: 15px;
+        color: #555555;
+        line-height: 1.2;
+        display: block;
+        width: 100%;
+        background: transparent;
+        padding: 0 5px;
+        height: 50px;
+    }
+    
+    input {
+        outline: none;
+        border: none;
+    }
+    
+    .flex-checkbox {
+        display: flex;
+        justify-content: space-between;
+        -ms-align-items: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    
+    input[type=checkbox],
+    input[type=radio] {
+        box-sizing: border-box;
+        padding: 0;
+    }
+    
+    .input-checkbox100 {
+        display: none;
+    }
+    
+    .label-checkbox100 {
+        font-family: Poppins-Regular;
+        font-size: 15px;
+        color: #999999;
+        line-height: 1.4;
+        display: block;
+        position: relative;
+        padding-left: 26px;
+        cursor: pointer;
+    }
+    
+    label {
+        touch-action: manipulation;
+    }
+    
+    .input-checkbox100:checked+.label-checkbox100::before {
+        color: #57b846;
+    }
+    
+     ::after,
+     ::before {
+        box-sizing: inherit;
+    }
+    .label-checkbox100::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 13px;
+        color: transparent;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    a{
+        text-decoration: none;
+        background-color: transparent;
+    }
+    a:hover{
+        text-decoration: none;
+        color: #57b846;
+        transition: 0.5s;
+    }
+    .txt1 {
+        font-family: Poppins-Regular;
+        font-size: 15px;
+        line-height: 1.4;
+        color: #999999;
+    }
+    .container-login100-form-btn {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .login100-form-btn {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 160px;
+        height: 50px;
+        background-color: #57b846;
+        border-radius: 25px;
+        font-family: Poppins-Regular;
+        font-size: 19px;
+        color: #fff;
+        line-height: 1.2;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+    button {
+        outline: none !important;
+        border: none;
+        background: transparent;
+    }
+    button:hover{
+        background-color: black;
+    }

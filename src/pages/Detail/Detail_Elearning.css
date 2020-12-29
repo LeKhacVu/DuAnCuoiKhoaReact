@@ -1,0 +1,22 @@
+
+.title-detail{
+    padding-top: 20px;
+}
+.detail-item{
+    background-color: #ebe9e9;
+    border-top: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.detail-item .style_detail{
+    padding: 15px 0;
+}
+.detail-item .style_detail img{
+    width: 100%;
+} 
+.detail-item .style_detail .col-2{
+    padding-top: 35px;
+}
+.rating .rating_star .fa{
+    color: yellow;
+}

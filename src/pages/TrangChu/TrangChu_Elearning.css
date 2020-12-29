@@ -1,0 +1,170 @@
+.udemyCarousel {
+    background-image: url("../../assets/cover.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    color: #fff;
+    position: relative;
+  }
+  
+  .udemyCarousel .carousel_content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 {
+    position: absolute;
+    margin: 0 25px;
+    height: 100%;
+    display: flex;
+    top: 30%;
+    left: 5%;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group {
+    background-color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group .form-control {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    transition: none;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group .form-control:focus {
+    background-color: #fff;
+    border-color: #fff;
+    border-right-color: transparent;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group .form-control:focus + .input-group-append .input-group-text {
+    background-color: #fff;
+    border-color: #fff;
+    border-left-color: transparent;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group .form-control:focus + .input-group-append .input-group-text:hover {
+    background-color: #ec5252;
+    color: #fff;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group .input-group-text {
+    background-color: transparent;
+    border-color: transparent;
+    color: #ec5252;
+  }
+  
+  .udemyCarousel .carousel_content .col-5 form .input-group .input-group-text:hover {
+    background-color: #ec5252;
+    color: #fff;
+  }
+  /* begin intro */
+  .intro {
+    background: linear-gradient(to right, #521822, #ec5252);
+  }
+  
+  .intro .intro__content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .intro .intro__content .icon {
+    color: #fff;
+    font-size: 47px;
+    font-weight: normal;
+    margin-right: 25px;
+  }
+  
+  .intro .intro__content .icon__content {
+    padding-top: 10px;
+  }
+  
+  .intro .intro__content .icon__content p:first-child {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .intro .intro__content .icon__content p:last-child {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  /* end intro */
+  /* begin course */
+   .courses_item {
+    margin-top: 10px;
+  }
+  
+   .courses_item .card-title {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+   .courses_item .card-text {
+    color: #686f7a;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  
+   .courses_item .rating {
+    display: flex;
+  }
+  
+   .courses_item .rating .rating_star {
+    color: #F4C150;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  
+   .courses_item .rating span:nth-child(2) {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+   .courses_item .rating span:last-child {
+    color: #686f7a;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 5px;
+  }
+  
+   .courses_item .price {
+    text-align: right;
+  }
+  .courses_item .price button{
+    background-color: #d4b03c;
+    color: black;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  
+  
+  
+   .courses_item .card {
+    transition: all 0.5s;
+  }
+  
+   .courses_item .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
+
+  .courses_item .rowCourse {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px 20px;
+  }
+  /* end course */
+  
+  

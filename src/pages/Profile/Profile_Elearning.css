@@ -1,0 +1,13 @@
+.profile{
+    background: linear-gradient(to right,#521822, #ec5252);
+    padding: 20px;
+
+}
+.title-profile{
+    color: gray;
+    margin: 0;
+}
+.course-special{
+    background-color: gray;
+    padding: 15px;
+}
