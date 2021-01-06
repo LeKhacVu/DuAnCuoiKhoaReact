@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Course_Item from '../Cousre_Item/Course_Item'
 import './TrangChu_Elearning.css'
 import Axios from "axios"
-export default class TrangChu_Elearning extends Component {
+import {connect} from 'react-redux'
+ class TrangChu_Elearning extends Component {
     render() {
         return (
             <div>
@@ -74,19 +75,12 @@ export default class TrangChu_Elearning extends Component {
                 {/* END INTRO */}
                 {/* BEGIN COURSE */}
                 <div className="course">
-                    <h4>Các khóa học mới nhất</h4>
+                    <h4 className="container course_style display-4">Các khóa học mới nhất</h4>
                     <div className="courses_item container">
                         <div className="rowCourse">
-                          <Course_Item/>
-                          <Course_Item/>
-                          <Course_Item/>
-                          <Course_Item/>
-                          <Course_Item/>
-                          <Course_Item/>
-                          <Course_Item/>
-                          <Course_Item/>
-                          
-                          
+                            {this.props.coursesList.map((item,index)=>(
+                                    <Course_Item item={item}/>
+                            ))}
                         </div>
                     </div>
 
@@ -101,9 +95,27 @@ export default class TrangChu_Elearning extends Component {
             method: 'GET',
             url:'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01'
         }).then((res)=>{
-            console.log(res)
+            this.props.dispatch({
+                type: 'DANH_SACH_KHOA_HOC',
+                payload: res.data
+            })
+        }).catch((err)=>{
+            console.log(err)
+        })
+        Axios({
+            method:'GET',
+            url:'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc'
+        }).then((res)=>{
+            this.props.dispatch({
+                type:'DANH_MUC_KHOA_HOC_1',
+                payload: res.data
+            })
         }).catch((err)=>{
             console.log(err)
         })
     }
 }
+const mapStateToProps =(state)=>({
+    coursesList: state.courses.courses
+});
+export default connect(mapStateToProps)(TrangChu_Elearning);

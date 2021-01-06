@@ -97,6 +97,11 @@
   }
   /* end intro */
   /* begin course */
+  .course .course_style{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
    .courses_item {
     margin-top: 10px;
   }

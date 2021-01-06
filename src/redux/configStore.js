@@ -1,14 +1,15 @@
 import {applyMiddleware, combineReducers, createStore} from 'redux';
-import QuanLyPhimReducer from './reducers/QuanLyPhimReducer';
-import reduxThunk from 'redux-thunk';
 
+
+import CourseReducer from './reducers/CourseReducer';
 
 const rootReducer = combineReducers({
     //reducer khai báo tại đây
-    QuanLyPhimReducer
+   
+    courses: CourseReducer,
 })
 
-const store = createStore(rootReducer,applyMiddleware(reduxThunk));
+const store = createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export default store;
 
