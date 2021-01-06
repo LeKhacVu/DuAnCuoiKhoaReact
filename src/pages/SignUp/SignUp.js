@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import './SignUp.css'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as yup from 'yup'
+import {userService} from '../../services'
+const signupUserSchema = yup.object().shape({
+    taiKhoan: yup.string().required("* Không được bỏ trống!"),
+    matKhau: yup.string().required("* Không được bỏ trống!"),
+    hoTen: yup.string().required("* Không được bỏ trống!"),
+    email: yup.string().required("* Không được bỏ trống!").email("* Email không hợp lệ!"),
+    soDT:yup.string().required("* Không được bỏ trống!").matches(/^[0-9]+$/),
+    maNhom:yup.string().required("* Không được bỏ trống!")
+})
 export default class SignUp extends Component {
-    _handleSubmit = values =>{
-        console.log(values)
+    _handleSubmit = values => {
+        userService.signUp(values)
+        .then(res=>{
+            console.log(res)
+        }).catch(err=>{
+            console.log(err)
+        })
     }
     render() {
         return (
@@ -23,18 +38,24 @@ export default class SignUp extends Component {
                             maNhom: "GP01",
 
                         }}
+                        validationSchema={signupUserSchema}
                         onSubmit={this._handleSubmit}
                         render={(formikProps) => (
                             <Form className="login-form">
                                 <div className="form-label m-b-26">
                                     <span className="label-input">Tài Khoản</span>
-                                    <Field className="input-1 " type="text" name="taiKhoan" onChange={formikProps.handleChange} placeholder="Enter Username" ></Field>
+                                    <Field className="input-1 " type="text" name="taiKhoan" onChange={formikProps.handleChange} placeholder="Enter Username" >
+                             
+                                    </Field>
+                                    <ErrorMessage  name="taiKhoan" ></ErrorMessage>
                                     <span className="focus-input">
                                     </span>
+                                   
                                 </div>
                                 <div className="form-label ">
                                     <span className="label-input">Password</span>
                                     <Field className="input-1" type="password" name="matKhau" onChange={formikProps.handleChange} placeholder="Enter Password" ></Field>
+                                    <ErrorMessage name="matKhau" />
                                     <span className="focus-input">
                                     </span>
                                 </div>
@@ -47,18 +68,21 @@ export default class SignUp extends Component {
                                 <div className="form-label m-b-26">
                                     <span className="label-input">Email</span>
                                     <Field className="input-1 " type="text" name="email" onChange={formikProps.handleChange} placeholder="Email Addess" ></Field>
+                                    <ErrorMessage name="email" />
                                     <span className="focus-input">
                                     </span>
                                 </div>
                                 <div className="form-label m-b-26">
                                     <span className="label-input">Họ tên</span>
                                     <Field className="input-1 " type="text" name="hoTen" onChange={formikProps.handleChange} placeholder="Enter Username" ></Field>
+                                    <ErrorMessage name="hoTen" />
                                     <span className="focus-input">
                                     </span>
                                 </div>
                                 <div className="form-label m-b-26">
                                     <span className="label-input">Số điện thoại</span>
                                     <Field className="input-1 " type="text" name="soDT" onChange={formikProps.handleChange} placeholder="Phone Number" ></Field>
+                                    <ErrorMessage name="soDT" />
                                     <span className="focus-input">
                                     </span>
                                 </div>
@@ -77,7 +101,7 @@ export default class SignUp extends Component {
                                         <option>GP10</option>
 
                                     </Field>
-
+                                    <ErrorMessage name="maNhom" />
                                 </div>
 
                                 <div className="flex-checkbox">
