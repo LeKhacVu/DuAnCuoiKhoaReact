@@ -3,10 +3,9 @@ import { NavLink } from 'react-router-dom'
 import Course_Item from '../Cousre_Item/Course_Item'
 import './Profile_Elearning.css'
 import { connect } from 'react-redux'
-import Axios from 'axios'
-import { coursesService } from '../../services'
-import { createAction } from '../../redux/actions'
-import { KHOA_HOC_THEO_DANH_MUC } from '../../redux/constants/QuanLyKhoaHocConstant'
+import { khoaHocTheoDanhMuc } from '../../redux/actions/QuanLyKhoaHocAction'
+
+
 
 class Profile_Elearning extends Component {
     render() {
@@ -36,13 +35,7 @@ class Profile_Elearning extends Component {
         )
     }
     componentDidMount(){
-       coursesService.layKhoaHocTheoDanhMucApi()
-       .then((res)=>{
-           this.props.dispatch(createAction(KHOA_HOC_THEO_DANH_MUC, reS.data)
-            )
-        }).catch((err)=>{
-            console.log(err)
-        })
+     this.props.dispatch(khoaHocTheoDanhMuc())
     }
 }
 

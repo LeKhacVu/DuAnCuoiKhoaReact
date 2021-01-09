@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './pages/Home/Home';
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Contact from './pages/Contact/Contact';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
@@ -18,7 +18,7 @@ function App() {
       <Header_Elearning />
       {/* <Home abc="123"/> */}
       <Switch>
-        <Route exact path='/home' component={Home} />
+       
         <Route exact path='/contact' component={Contact} />
         <Route exact path='/course' component={Course_Detail} />
         <Route exact path='/login' component={Login_Elearning} />

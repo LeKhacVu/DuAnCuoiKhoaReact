@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 //setup redux
 import store from './redux/configStore'
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 
 
