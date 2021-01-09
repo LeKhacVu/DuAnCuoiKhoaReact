@@ -17,6 +17,10 @@ const CourseReducer = (state = stateDefault, action) =>{
             state.courses = action.payload;
             return {...state}
         }
+        case 'KHOA_HOC_THEO_DANH_MUC':{
+            state.courses = action.payload;
+            return {...state}
+        }
 
         default: return state;
     }

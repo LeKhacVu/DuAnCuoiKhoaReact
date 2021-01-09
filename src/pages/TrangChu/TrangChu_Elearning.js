@@ -107,7 +107,7 @@ import {connect} from 'react-redux'
             url:'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc'
         }).then((res)=>{
             this.props.dispatch({
-                type:'DANH_MUC_KHOA_HOC_1',
+                type:'DANH_MUC_KHOA_HOC',
                 payload: res.data
             })
         }).catch((err)=>{
