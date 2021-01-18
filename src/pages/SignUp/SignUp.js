@@ -2,16 +2,10 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import './SignUp.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as yup from 'yup'
+
 import {userService} from '../../services'
-const signupUserSchema = yup.object().shape({
-    taiKhoan: yup.string().required("* Không được bỏ trống!"),
-    matKhau: yup.string().required("* Không được bỏ trống!"),
-    hoTen: yup.string().required("* Không được bỏ trống!"),
-    email: yup.string().required("* Không được bỏ trống!").email("* Email không hợp lệ!"),
-    soDT:yup.string().required("* Không được bỏ trống!").matches(/^[0-9]+$/),
-    maNhom:yup.string().required("* Không được bỏ trống!")
-})
+import { signupUserSchema } from '../../services/user'
+
 export default class SignUp extends Component {
     _handleSubmit = values => {
         userService.signUp(values)

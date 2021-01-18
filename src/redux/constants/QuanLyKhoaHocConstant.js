@@ -2,3 +2,4 @@ export const DANH_SACH_KHOA_HOC = 'DANH_SACH_KHOA_HOC';
 export const CHI_TIET_KHOA_HOC = 'CHI_TIET_KHOA_HOC';
 export const DANH_MUC_KHOA_HOC = 'DANH_MUC_KHOA_HOC';
 export const KHOA_HOC_THEO_DANH_MUC = 'KHOA_HOC_THEO_DANH_MUC';
+export const DANG_NHAP = 'DANG_NHAP';

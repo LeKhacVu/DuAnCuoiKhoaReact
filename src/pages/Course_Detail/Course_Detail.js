@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './Course_Detail.css'
 import Axios from 'axios'
 import {connect} from 'react-redux'
+import { coursesService } from '../../services'
+import { CHI_TIET_KHOA_HOC } from '../../redux/constants/QuanLyKhoaHocConstant'
+import { createAction } from '../../redux/actions'
  class Course_Detail extends Component {
      render(){
     return (
@@ -17,14 +20,8 @@ import {connect} from 'react-redux'
     
 }
 componentDidMount(){
-    Axios({
-        method:"GET",
-        url: 'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=1'
-    }).then((res)=>{
-        this.props.dispatch({
-            type:'CHI_TIET_KHOA_HOC',
-            payload:res.data
-        })
+    coursesService.layChiTietKhoaHocApi.then((res)=>{
+        this.props.dispatch(createAction(CHI_TIET_KHOA_HOC.res.data))
     }).catch((err)=>{
         console.log(err)
     })

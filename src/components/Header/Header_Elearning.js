@@ -28,11 +28,11 @@ export default function Header_Elearning() {
                     <div className="col-sm-2 col-md-4 col-lg-3 col-xl-5">
                         <div className="header__right">
                             <ul className="navbar-nav">
-                                <li class="nav-item business">
-                                    <a class="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank">Bài viết </a>
+                                <li className="nav-item business">
+                                    <a className="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank">Bài viết </a>
                                 </li>
-                                <li class="nav-item teach">
-                                    <a class="nav-link" href="https://cyberlearn.vn/" target="_blank">Học online với cyberlearn.vn</a>
+                                <li className="nav-item teach">
+                                    <a className="nav-link" href="https://cyberlearn.vn/" target="_blank">Học online với cyberlearn.vn</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#"><i className="fa fa-shopping-cart" /></a>
