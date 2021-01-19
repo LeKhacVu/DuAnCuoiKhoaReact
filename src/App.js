@@ -20,7 +20,7 @@ function App() {
       <Switch>
        
         <Route exact path='/contact' component={Contact} />
-        <Route exact path='/course' component={Course_Detail} />
+        <Route exact path='/course/:courseId' component={Course_Detail} />
         <Route exact path='/login' component={Login_Elearning} />
         <Route exact path='/signup' component={SignUp} />
         <Route exact path='/thongtintaikhoan' component={ThongTinTaiKhoan}/>
@@ -29,8 +29,7 @@ function App() {
       
         
         <Route exact path='/trangchu' component={TrangChu_Elearning} />
-        <Route exact path='/profile' component={Profile_Elearning}/>
-
+        <Route exact path='/profile/:id' component={Profile_Elearning}/>
         <Route exact path='/' component={TrangChu_Elearning} />
         <Route exact path='*' component={PageNotFound} />
       </Switch>

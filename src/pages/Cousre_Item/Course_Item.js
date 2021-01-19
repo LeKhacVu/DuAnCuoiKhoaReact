@@ -7,7 +7,9 @@ import React, { Component } from 'react'
         return (
             <div>
                  <div className="card ">
+                <NavLink to={`/course/${this.props.item.maKhoaHoc}`}>
                 <img className="card-img-top" src={this.props.item.hinhAnh} alt="Card image" style={{width:'100%',height:200}} />
+                </NavLink>
                 <div className="card-body">
                     <h4 className="card-title">{this.props.item.tenKhoaHoc}</h4>
                     <p className="card-text">{this.props.item.danhMucKhoaHoc.tenDanhMucKhoaHoc}</p>

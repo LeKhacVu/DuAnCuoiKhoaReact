@@ -120,6 +120,17 @@
     color: #3E1311;
     font-size: 15px;
   }
+  .dropdown-toggle:hover {
+    background-color: transparent;
+  }
+  .dropdown-toggle::after{
+    display: none;
+  }
+  .dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #D4b03c;
+}
   
   @media screen and (max-width: 1200px) {
     .header_content .header__right .business,

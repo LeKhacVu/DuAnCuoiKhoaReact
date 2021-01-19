@@ -1,12 +1,6 @@
-.background-detail{
-    background-image: url("../../assets/77914391-front-end-development-web-application-website-creating-concept-developer-working-at-a-laptop-flat-st.jpg");
-    height: 400px;
-    /* background-attachment: fixed; */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-   
-   
+.images_style{
+    width: 100%;
+    height: 550px;
 }
 .textDetail{
     font-size: 30px;

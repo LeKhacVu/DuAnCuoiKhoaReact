@@ -13,14 +13,14 @@ export const danhSachKhoaHoc = () => {
        
     }
 }
-export const khoaHocTheoDanhMuc = () => {
-    return (dispatch) => {
-        coursesService.layKhoaHocTheoDanhMucApi()
-        .then((res)=>{
-            dispatch(createAction(KHOA_HOC_THEO_DANH_MUC, res.data)
-             )
-         }).catch((err)=>{
-             console.log(err)
-         })
-    }
-}
+// export const khoaHocTheoDanhMuc = () => {
+//     return (dispatch) => {
+//         coursesService.layKhoaHocTheoDanhMucApi(this.props.match.params.id)
+//         .then((res)=>{
+//             dispatch(createAction(KHOA_HOC_THEO_DANH_MUC, res.data)
+//              )
+//          }).catch((err)=>{
+//              console.log(err)
+//          })
+//     }
+// }

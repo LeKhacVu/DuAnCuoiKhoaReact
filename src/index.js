@@ -7,12 +7,14 @@ import * as serviceWorker from './serviceWorker';
 import store from './redux/configStore'
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { DatePicker } from 'antd';
 
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <App />,
+    <DatePicker />, mountNode
   </Provider>
   ,
 

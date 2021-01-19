@@ -1,11 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import './Header_Elearning.css'
+import { Link, NavLink } from 'react-router-dom'
+import './Header_Elearning.css';
+import 'antd/dist/antd.css';
 
 export default function Header_Elearning() {
     return (
         <div className="hr">
-            
+
             <header className="header_content">
                 <nav className="navbar navbar-expand-lg navbar-light ">
                     <div className="col-sm-10 col-md-8 col-lg-9 col-xl-7">
@@ -14,7 +15,22 @@ export default function Header_Elearning() {
                                 <img src="../img/logocybersoft.png" /> CYBERSOFT
                             </NavLink>
 
-                            <span className="categories"><i className="fa fa-th" /><NavLink to="/profile" className="deleteText" style={{color: '#3E1311'}}>Danh mục khóa học</NavLink></span>
+                            <span className="categories">
+                                <div class="dropdown">
+                                    <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i className="fa fa-th" /><NavLink to="/profile" className="deleteText" style={{ color: '#3E1311' }}>Danh mục khóa học</NavLink>
+                                    </button>
+                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <Link to="/profile/Tuduy" className="dropdown-item" >Tư duy lập trình</Link>
+                                        <Link to="/profile/Frontend" className="dropdown-item" >Front-End</Link>
+                                        <Link to="/profile/Backend" className="dropdown-item" >Back-End</Link>
+                                        <Link to="/profile/Fullstack" className="dropdown-item" >Full Stack</Link>
+                                        <Link to="/profile/" className="dropdown-item" >Thiết kế web</Link>
+                                        <Link to="/profile/Didong" className="dropdown-item" >Lập trình di động</Link>
+
+                                    </div>
+                                </div>
+                            </span>
                             <form className="header__form">
                                 <div className="input-group ">
                                     <input type="text" className="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="basic-addon2" />

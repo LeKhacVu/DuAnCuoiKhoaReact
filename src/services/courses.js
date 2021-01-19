@@ -6,10 +6,10 @@ class CourseService {
             url: 'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01'
         });
     }
-    layChiTietKhoaHocApi() {
+    layChiTietKhoaHocApi(id) {
         return Axios({
             method: "GET",
-            url: "https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=1"
+            url: `https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${id}`
         });
     }
     layDanhMucKhoaHocApi() {
@@ -18,10 +18,10 @@ class CourseService {
             url: 'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc'
         });
     }
-    layKhoaHocTheoDanhMucApi() {
+    layKhoaHocTheoDanhMucApi(id) {
         return Axios({
             method: 'GET',
-            url: 'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc?maDanhMuc=FrontEnd&MaNhom=GP01'
+            url: `https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc?maDanhMuc=${id}&MaNhom=GP01`
         });
     }
 }
