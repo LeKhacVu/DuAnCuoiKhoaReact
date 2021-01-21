@@ -16,8 +16,8 @@ class UserService {
             data
         });
     }
-    singIn(user){
-        console.log(user)
+    signIn(user){
+        
         return Axios({
             method:"POST",
             url:"https://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangNhap",

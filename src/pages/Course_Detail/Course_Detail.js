@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import './Course_Detail.css'
 import Axios from 'axios'
 import { connect } from 'react-redux'
-import { coursesService } from '../../services'
-import { CHI_TIET_KHOA_HOC } from '../../redux/constants/QuanLyKhoaHocConstant'
-import { createAction } from '../../redux/actions'
+
+import { chiTietKhoaHocApi } from '../../redux/actions/QuanLyKhoaHocAction'
 class Course_Detail extends Component {
     render() {
         return (
@@ -20,12 +19,7 @@ class Course_Detail extends Component {
     }
     componentDidMount() {
 
-        coursesService.layChiTietKhoaHocApi(this.props.match.params.courseId)
-            .then((res) => {
-                this.props.dispatch(createAction(CHI_TIET_KHOA_HOC,res.data))
-            }).catch((err) => {
-                console.log(err)
-            })
+        this.props.dispatch(chiTietKhoaHocApi(this.props.match.params.courseId))
     }
 }
 const mapStateToProps = (state) => ({

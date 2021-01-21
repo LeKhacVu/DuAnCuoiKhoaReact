@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Contact from './pages/Contact/Contact';
@@ -12,30 +12,46 @@ import Course_Detail from './pages/Course_Detail/Course_Detail';
 import SignUp from './pages/SignUp/SignUp';
 import Login_Elearning from './pages/Login/Login_Elearning';
 import ThongTinTaiKhoan from './pages/ThongTinTaiKhoan/ThongTinTaiKhoan';
-function App() {
-  return (
-    <BrowserRouter>
-      <Header_Elearning />
-      {/* <Home abc="123"/> */}
-      <Switch>
-       
-        <Route exact path='/contact' component={Contact} />
-        <Route exact path='/course/:courseId' component={Course_Detail} />
-        <Route exact path='/login' component={Login_Elearning} />
-        <Route exact path='/signup' component={SignUp} />
-        <Route exact path='/thongtintaikhoan' component={ThongTinTaiKhoan}/>
-        {/* <Route exact path='/detail/:id' component={Detail_Elearning} /> */}
-        <Route exact path='/detail' component={Detail_Elearning} />
-      
-        
-        <Route exact path='/trangchu' component={TrangChu_Elearning} />
-        <Route exact path='/profile/:id' component={Profile_Elearning}/>
-        <Route exact path='/' component={TrangChu_Elearning} />
-        <Route exact path='*' component={PageNotFound} />
-      </Switch>
-      <Footer_Elearning/>
-    </BrowserRouter>
-  );
+import {connect} from 'react-redux';
+import { createAction } from './redux/actions';
+import { DANG_NHAP } from './redux/constants/QuanLyKhoaHocConstant';
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Header_Elearning />
+        {/* <Home abc="123"/> */}
+        <Switch>
+
+          <Route exact path='/contact' component={Contact} />
+          <Route exact path='/course/:courseId' component={Course_Detail} />
+          <Route exact path='/login' component={Login_Elearning} />
+          <Route exact path='/signup' component={SignUp} />
+          <Route exact path='/user' component={ThongTinTaiKhoan} />
+          {/* <Route exact path='/detail/:id' component={Detail_Elearning} /> */}
+          <Route exact path='/detail' component={Detail_Elearning} />
+
+
+          <Route exact path='/trangchu' component={TrangChu_Elearning} />
+          <Route exact path='/profile/:id' component={Profile_Elearning} />
+          <Route exact path='/' component={TrangChu_Elearning} />
+          <Route exact path='*' component={PageNotFound} />
+        </Switch>
+        <Footer_Elearning />
+      </BrowserRouter>
+    );
+  }
+  _getCredentialFromLocal = ()=>{
+    const credentialsUser = localStorage.getItem('credentials');
+    if(credentialsUser){
+      this.props.dispatch(createAction(DANG_NHAP, JSON.parse(credentialsUser)))
+    }
+  }
+  componentDidMount(){
+    this._getCredentialFromLocal()
+  }
+
 }
 
-export default App;
+
+export default connect() (App);

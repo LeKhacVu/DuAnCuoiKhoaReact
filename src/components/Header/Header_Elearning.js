@@ -1,67 +1,92 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './Header_Elearning.css';
 import 'antd/dist/antd.css';
+import { connect } from 'react-redux';
 
-export default function Header_Elearning() {
-    return (
-        <div className="hr">
+class Header_Elearning extends Component {
+    render() {
+        return (
+            <div className="hr">
 
-            <header className="header_content">
-                <nav className="navbar navbar-expand-lg navbar-light ">
-                    <div className="col-sm-10 col-md-8 col-lg-9 col-xl-7">
-                        <div className="header__left">
-                            <NavLink className="navbar-brand" to="/trangchu">
-                                <img src="../img/logocybersoft.png" /> CYBERSOFT
+                <header className="header_content">
+                    <nav className="navbar navbar-expand-lg navbar-light ">
+                        <div className="col-sm-10 col-md-8 col-lg-9 col-xl-7">
+                            <div className="header__left">
+                                <NavLink className="navbar-brand" to="/trangchu">
+                                    <img src="../img/logocybersoft.png" /> CYBERSOFT
                             </NavLink>
 
-                            <span className="categories">
-                                <div class="dropdown">
-                                    <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i className="fa fa-th" /><NavLink to="/profile" className="deleteText" style={{ color: '#3E1311' }}>Danh mục khóa học</NavLink>
-                                    </button>
-                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <Link to="/profile/Tuduy" className="dropdown-item" >Tư duy lập trình</Link>
-                                        <Link to="/profile/Frontend" className="dropdown-item" >Front-End</Link>
-                                        <Link to="/profile/Backend" className="dropdown-item" >Back-End</Link>
-                                        <Link to="/profile/Fullstack" className="dropdown-item" >Full Stack</Link>
-                                        <Link to="/profile/" className="dropdown-item" >Thiết kế web</Link>
-                                        <Link to="/profile/Didong" className="dropdown-item" >Lập trình di động</Link>
+                                <span className="categories">
+                                    <div class="dropdown">
+                                        <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i className="fa fa-th" /><NavLink to="/profile" className="deleteText" style={{ color: '#3E1311' }}>Danh mục khóa học</NavLink>
+                                        </button>
+                                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <NavLink to="/profile/Tuduy" className="dropdown-item" >Tư duy lập trình</NavLink>
+                                            <NavLink to="/profile/Frontend" className="dropdown-item" >Front-End</NavLink>
+                                            <NavLink to="/profile/Backend" className="dropdown-item" >Back-End</NavLink>
+                                            <NavLink to="/profile/Fullstack" className="dropdown-item" >Full Stack</NavLink>
+                                            <NavLink to="/profile/" className="dropdown-item" >Thiết kế web</NavLink>
+                                            <NavLink to="/profile/Didong" className="dropdown-item" >Lập trình di động</NavLink>
 
+                                        </div>
                                     </div>
-                                </div>
-                            </span>
-                            <form className="header__form">
-                                <div className="input-group ">
-                                    <input type="text" className="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                                    <div className="input-group-append">
-                                        <span className="input-group-text" id="basic-addon2"><i className="fa fa-search" /></span>
+                                </span>
+                                <form className="header__form">
+                                    <div className="input-group ">
+                                        <input type="text" className="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                        <div className="input-group-append">
+                                            <span className="input-group-text" id="basic-addon2"><i className="fa fa-search" /></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-sm-2 col-md-4 col-lg-3 col-xl-5">
-                        <div className="header__right">
-                            <ul className="navbar-nav">
-                                <li className="nav-item business">
-                                    <a className="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank">Bài viết </a>
-                                </li>
-                                <li className="nav-item teach">
-                                    <a className="nav-link" href="https://cyberlearn.vn/" target="_blank">Học online với cyberlearn.vn</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#"><i className="fa fa-shopping-cart" /></a>
-                                </li>
-                                <li className="nav-item btn-groups">
-                                    <NavLink to="/login" className="ude-btnWhite">Log In</NavLink>
-                                    <NavLink to="/signup" className="ude-btnRed">Sign Up</NavLink>
-                                </li>
-                            </ul></div>
-                    </div>
-                </nav>
-            </header>
+                        <div className="col-sm-2 col-md-4 col-lg-3 col-xl-5">
+                            <div className="header__right">
+                                <ul className="navbar-nav">
 
-        </div>
-    )
+                                    <li className="nav-item business">
+                                        <a className="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank">Bài viết </a>
+                                    </li>
+                                    <li className="nav-item teach">
+                                        <a className="nav-link" href="https://cyberlearn.vn/" target="_blank">Học online với cyberlearn.vn</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#"><i className="fa fa-shopping-cart" /></a>
+                                    </li>
+                                    
+                                        {this.props.credentials ? (<li className="nav-item">
+                                           
+                                                <span className="nav-link"><i className="fas fa-user-circle styleAvatarUser"></i>{this.props.credentials.hoTen} </span>
+                                               
+                                          
+                                        </li>
+
+                                        ) : (
+                                                <>
+                                                    <li className="nav-item btn-groups">
+                                                        <NavLink to="/login" className="ude-btnWhite">Log In</NavLink>
+                                                        <NavLink to="/signup" className="ude-btnRed">Sign Up</NavLink>
+                                                    </li>
+                                                </>
+                                            )}
+                                    
+
+
+                                </ul></div>
+                        </div>
+                    </nav>
+                </header>
+
+            </div>
+        )
+    }
 }
+const mapStateToProps = (state) => {
+    return {
+        credentials: state.user.credentials
+    }
+}
+export default connect(mapStateToProps)(Header_Elearning);
