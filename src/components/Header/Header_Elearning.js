@@ -1,11 +1,28 @@
 import React, { Component, Fragment } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, Redirect } from 'react-router-dom'
 import './Header_Elearning.css';
 import 'antd/dist/antd.css';
 import { connect } from 'react-redux';
 
 class Header_Elearning extends Component {
+
+    state = {
+        navigate: false
+    };
+
+    logout = () => {
+        localStorage.clear("token");
+        this.setState({ navigate: true });
+    }
+
     render() {
+        const { navigate } = this.state;
+
+        if(navigate){
+            return <Redirect to="/login" push={true} />
+        }
+
+
         return (
             <div className="hr">
 
@@ -56,23 +73,27 @@ class Header_Elearning extends Component {
                                     <li className="nav-item">
                                         <a className="nav-link" href="#"><i className="fa fa-shopping-cart" /></a>
                                     </li>
-                                    
-                                        {this.props.credentials ? (<li className="nav-item">
-                                           
-                                                <span className="nav-link"><i className="fas fa-user-circle styleAvatarUser"></i>{this.props.credentials.hoTen} </span>
-                                               
-                                          
-                                        </li>
 
-                                        ) : (
-                                                <>
-                                                    <li className="nav-item btn-groups">
-                                                        <NavLink to="/login" className="ude-btnWhite">Log In</NavLink>
-                                                        <NavLink to="/signup" className="ude-btnRed">Sign Up</NavLink>
-                                                    </li>
-                                                </>
-                                            )}
-                                    
+                                    {this.props.credentials ? (<li className="nav-item">
+                                        <div className="dropdown" >
+                                            <button className="nav-link dropdown-toggle" ><i className="fas fa-user-circle styleAvatarUser"></i>{this.props.credentials.hoTen} </button>
+                                            <div className="dropdown-content" >
+                                                <a href="/user">Thông tin tài khoản</a>
+                                                <a onClick={this.logout}>Đăng xuất</a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                    ) : (
+                                            <>
+                                                <li className="nav-item btn-groups">
+                                                    <NavLink to="/login" className="ude-btnWhite">Log In</NavLink>
+                                                    <NavLink to="/signup" className="ude-btnRed">Sign Up</NavLink>
+                                                </li>
+                                            </>
+                                        )}
+
 
 
                                 </ul></div>
@@ -82,8 +103,13 @@ class Header_Elearning extends Component {
 
             </div>
         )
+
     }
+
+
 }
+
+
 const mapStateToProps = (state) => {
     return {
         credentials: state.user.credentials
