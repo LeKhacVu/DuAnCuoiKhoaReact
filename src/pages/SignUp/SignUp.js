@@ -14,6 +14,7 @@ export default class SignUp extends Component {
         }).catch(err=>{
             console.log(err)
         })
+        this.props.history.push('/login')
     }
     render() {
         return (

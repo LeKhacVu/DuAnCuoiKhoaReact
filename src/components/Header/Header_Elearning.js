@@ -7,12 +7,29 @@ import { connect } from 'react-redux';
 class Header_Elearning extends Component {
 
     state = {
-        navigate: false
+        navigate: false,
+        search:'',
+
     };
+   
 
     logout = () => {
         localStorage.clear("token");
         this.setState({ navigate: true });
+    }
+
+    handleChangeValue= (event) =>{
+       let {name,value} =event.target;
+        this.setState({
+            [name]:value
+        },()=>{
+            console.log(this.state)
+        })
+    }
+    handleSubmit=()=>{
+        if(this.handleChangeValue.value==='front end'){
+            alert('thành công')
+        }
     }
 
     render() {
@@ -30,13 +47,13 @@ class Header_Elearning extends Component {
                     <nav className="navbar navbar-expand-lg navbar-light ">
                         <div className="col-sm-10 col-md-8 col-lg-9 col-xl-7">
                             <div className="header__left">
-                                <NavLink className="navbar-brand" to="/trangchu">
+                                <NavLink className="navbar-brand" to="/home">
                                     <img src="../img/logocybersoft.png" /> CYBERSOFT
                             </NavLink>
 
                                 <span className="categories">
                                     <div class="dropdown">
-                                        <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{verticalAlign: 'super'}}>
                                             <i className="fa fa-th" /><NavLink to="/profile" className="deleteText" style={{ color: '#3E1311' }}>Danh mục khóa học</NavLink>
                                         </button>
                                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -52,8 +69,12 @@ class Header_Elearning extends Component {
                                 </span>
                                 <form className="header__form">
                                     <div className="input-group ">
-                                        <input type="text" className="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                                        <div className="input-group-append">
+                                        <input name="search" type="text" className="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="basic-addon2" 
+                                         onChange={this.handleChangeValue}
+                                         onSubmit={this.handleSubmit}
+                                        
+                                        />
+                                         <div className="input-group-append">
                                             <span className="input-group-text" id="basic-addon2"><i className="fa fa-search" /></span>
                                         </div>
                                     </div>
@@ -65,10 +86,10 @@ class Header_Elearning extends Component {
                                 <ul className="navbar-nav">
 
                                     <li className="nav-item business">
-                                        <a className="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank">Bài viết </a>
+                                        <a className="nav-link" href="https://cybersoft.edu.vn/blog/" target="_blank" style={{verticalAlign: 'super'}}>Bài viết </a>
                                     </li>
                                     <li className="nav-item teach">
-                                        <a className="nav-link" href="https://cyberlearn.vn/" target="_blank">Học online với cyberlearn.vn</a>
+                                        <a className="nav-link" href="https://cyberlearn.vn/" target="_blank" style={{verticalAlign: 'super'}}>Học online với cyberlearn.vn</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href="#"><i className="fa fa-shopping-cart" /></a>
@@ -79,7 +100,7 @@ class Header_Elearning extends Component {
                                             <button className="nav-link dropdown-toggle" ><i className="fas fa-user-circle styleAvatarUser"></i>{this.props.credentials.hoTen} </button>
                                             <div className="dropdown-content" >
                                                 <a href="/user">Thông tin tài khoản</a>
-                                                <a onClick={this.logout}>Đăng xuất</a>
+                                                <a href="/login" onClick={this.logout}>Đăng xuất</a>
                                             </div>
                                         </div>
 
@@ -87,7 +108,7 @@ class Header_Elearning extends Component {
 
                                     ) : (
                                             <>
-                                                <li className="nav-item btn-groups">
+                                                <li className="nav-item btn-groups mt-2" >
                                                     <NavLink to="/login" className="ude-btnWhite">Log In</NavLink>
                                                     <NavLink to="/signup" className="ude-btnRed">Sign Up</NavLink>
                                                 </li>

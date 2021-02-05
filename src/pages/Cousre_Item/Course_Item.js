@@ -7,7 +7,7 @@ import React, { Component } from 'react'
         return (
             <div>
                  <div className="card " >
-                <NavLink to={`/course/${this.props.item.maKhoaHoc}`}>
+                <NavLink to={`/course/${this.props.item.maKhoaHoc}`} style={{height:200}}>
                 <img className="card-img-top" src={this.props.item.hinhAnh} alt="Card image" style={{width:'100%',height:200}} />
                 </NavLink>
                 <div className="card-body">
@@ -25,7 +25,7 @@ import React, { Component } from 'react'
                         <span>({this.props.item.luotXem})</span>
                     </div>
                     <div className="price mt-2">
-                        <NavLink to="/course" style={{marginTop:'10px',padding:'7px 8px', border:'1px solid #d4b03c',color:'black',backgroundColor:'#d4b03c',borderRadius:'5px'}}>Đăng ký</NavLink>
+                        <NavLink to={`/course/${this.props.item.maKhoaHoc}`} style={{marginTop:'10px',padding:'7px 8px', border:'1px solid #d4b03c',color:'black',backgroundColor:'#d4b03c',borderRadius:'5px'}}>Đăng ký</NavLink>
                     </div>
                 </div>
             </div>

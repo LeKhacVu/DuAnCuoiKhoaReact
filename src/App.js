@@ -32,7 +32,7 @@ class App extends Component {
           <Route exact path='/detail' component={Detail_Elearning} />
 
 
-          <Route exact path='/trangchu' component={TrangChu_Elearning} />
+          <Route exact path='/home' component={TrangChu_Elearning} />
           <Route exact path='/profile/:id' component={Profile_Elearning} />
           <Route exact path='/' component={TrangChu_Elearning} />
           <Route exact path='*' component={PageNotFound} />

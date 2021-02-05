@@ -1,7 +1,18 @@
+
+
 .images_style{
     width: 100%;
     height: 550px;
+    opacity: 0.5;
+    position: relative;
 }
+.title-detailCourse{
+    position: absolute;
+    top: 270px;
+    left: 200px;
+  
+}
+
 .textDetail{
     font-size: 30px;
     margin-top: 20px;

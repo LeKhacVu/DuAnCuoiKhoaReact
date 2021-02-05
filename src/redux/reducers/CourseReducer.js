@@ -1,6 +1,7 @@
 const stateDefault ={
     courses: [],
-    coursesDetail:null
+    coursesDetail:null,
+    danhSachKhoaHocDangKy:[],
 }
 const CourseReducer = (state = stateDefault, action) =>{
     switch(action.type){
@@ -19,6 +20,10 @@ const CourseReducer = (state = stateDefault, action) =>{
         }
         case 'KHOA_HOC_THEO_DANH_MUC':{
             state.courses = action.payload;
+            return {...state}
+        }
+        case 'DANG_KY_KHOA_HOC':{
+            state.danhSachKhoaHocDangKy = action.payload;
             return {...state}
         }
 

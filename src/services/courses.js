@@ -24,5 +24,12 @@ class CourseService {
             url: `https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc?maDanhMuc=${id}&MaNhom=GP01`
         });
     }
+    dangKyKhoaHocApi(data){
+        return Axios({
+            method:'POST',
+            url:'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/DangKyKhoaHoc',
+            data
+        });
+    }
 }
 export default CourseService;
