@@ -29,7 +29,7 @@ export const AdminTemplate = ({ Component, ...restProps }) => {
         return <Fragment>
             <Layout>
                 <Sider trigger={null} collapsible collapsed={state.collapsed}>
-                    <div className="logo" />
+                    <div className="logo" style={{backgroundImage:'url("../img/MIN-OP1.png")', backgroundPosition: 'left ', backgroundSsize: 'cover',width:92,height:86,marginBottom:20}}/>
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1" icon={< VideoCameraOutlined/>}>
                             <NavLink to='/admin/courses'>Quản lý khóa học</NavLink>
