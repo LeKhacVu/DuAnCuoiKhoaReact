@@ -32,7 +32,7 @@ export default function Footer_Elearning() {
                                         <input type="hidden" id="g-recaptcha-response_capchatuvan" name="g-recaptcha-response" className="dhvc-form-recaptcha" data-name="capchatuvan" defaultValue="03AGdBq27VUtqcg0RBtLOOhoyEvyCFu32j9sZRTVUqvKarQ3iilIgR_6x6FKJ1rMbZ3cjlYTp8Utjlg0WNHH1k5F6Vbku9wGyy6e4AoyI1yGa08n2fOIa_kGD1DU9GNKUrVQIhZYMYZ1KhF2WvWA0yO_KwqFe3Kw-_M7nm-fDZMO8NouCfY1haagv169K7KJzPBbRDPY-gLbjL4b5ovAbIPlXxiT8AGRnGE9LpIWdBWg57qL_WWs70PWRdn8dsDvyq91KiWcSrSVcVSM7oBHUpjjf9FTOWOSn-o27PZAiJIyrOo6hMlql_IJkvQkyEJ5DBLsID1cD75XWu8235nJFnieMFPGbZM-0Rsn1zlCOQXE84F-Myfu1TDTxomitU3tDKfjwpFmGgwt8h2Ef6uHAmXwfYcJ8kgNicPie6hJlMrWipnWZIDlhP4W0SkRrQQavXzZJX9thsLfTENASuzxBfhoxErfCebVKB650zH-hPepT8IkHcFt81ijDWJ3Q0t8UbDpKcaZwX-Di-" />
                                         <div className="dhvc-form-action dhvc_form_submit_button ">
                                             <button type="submit" className="button dhvc-form-submit">
-                                                <span className="dhvc-form-submit-label" style={{ color: 'white' }}>ĐĂNG KÍ TƯ VẤN</span>
+                                                <span className="dhvc-form-submit-label text-white">ĐĂNG KÍ TƯ VẤN</span>
                                                 <span className="dhvc-form-submit-spinner">
 
                                                 </span>

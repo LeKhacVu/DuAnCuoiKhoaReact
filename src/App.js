@@ -15,29 +15,34 @@ import ThongTinTaiKhoan from './pages/ThongTinTaiKhoan/ThongTinTaiKhoan';
 import {connect} from 'react-redux';
 import { createAction } from './redux/actions';
 import { DANG_NHAP } from './redux/constants/QuanLyKhoaHocConstant';
+import { AdminTemplate } from './templates/AdminTemplate';
+import CoursesManager from './pages/Admin/CoursesManager/CoursesManager';
+import UserManager from './pages/Admin/UsersManager/UserManager';
+import { HomeTemplate } from './templates/HomeTemplate';
+import ThemKhoaHoc from './pages/Admin/CoursesManager/ThemKhoaHoc';
+import ThemNguoiDung from './pages/Admin/UsersManager/ThemNguoiDung';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Header_Elearning />
+      <BrowserRouter>       
         {/* <Home abc="123"/> */}
         <Switch>
-
-          <Route exact path='/contact' component={Contact} />
-          <Route exact path='/course/:courseId' component={Course_Detail} />
-          <Route exact path='/login' component={Login_Elearning} />
-          <Route exact path='/signup' component={SignUp} />
-          <Route exact path='/user' component={ThongTinTaiKhoan} />
+          <HomeTemplate exact path='/course/:courseId' Component={Course_Detail} />
+          <HomeTemplate exact path='/login' Component={Login_Elearning} />
+          <HomeTemplate exact path='/signup' Component={SignUp} />
+          <HomeTemplate exact path='/user' Component={ThongTinTaiKhoan} />
           {/* <Route exact path='/detail/:id' component={Detail_Elearning} /> */}
-          <Route exact path='/detail' component={Detail_Elearning} />
-
-
-          <Route exact path='/home' component={TrangChu_Elearning} />
-          <Route exact path='/profile/:id' component={Profile_Elearning} />
-          <Route exact path='/' component={TrangChu_Elearning} />
+          <HomeTemplate exact path='/detail' Component={Detail_Elearning} />
+          <HomeTemplate exact path='/home' Component={TrangChu_Elearning} />
+          <HomeTemplate exact path='/profile/:id' Component={Profile_Elearning} />
+          <HomeTemplate exact path='/' Component={TrangChu_Elearning} />
+          <AdminTemplate exact path='/admin/courses' Component={CoursesManager}/>
+          <AdminTemplate exact path='/admin/courses/themKhoaHoc' Component={ThemKhoaHoc}/>
+          <AdminTemplate exact path='/admin/users/themNguoiDung' Component={ThemNguoiDung}/>
+          <AdminTemplate exact path='/admin/users' Component={UserManager}/>
           <Route exact path='*' component={PageNotFound} />
         </Switch>
-        <Footer_Elearning />
+       
       </BrowserRouter>
     );
   }

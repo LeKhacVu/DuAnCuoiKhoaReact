@@ -6,20 +6,17 @@ import * as serviceWorker from './serviceWorker';
 //setup redux
 import store from './redux/configStore'
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import { DatePicker } from 'antd';
+import 'antd/dist/antd.css'; 
 
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />,
-    <DatePicker />, mountNode
+    <App />   
   </Provider>
   ,
-
   document.getElementById('root')
-);
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

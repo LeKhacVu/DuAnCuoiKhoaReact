@@ -61,7 +61,7 @@ class Header_Elearning extends Component {
                                             <NavLink to="/profile/Frontend" className="dropdown-item" >Front-End</NavLink>
                                             <NavLink to="/profile/Backend" className="dropdown-item" >Back-End</NavLink>
                                             <NavLink to="/profile/Fullstack" className="dropdown-item" >Full Stack</NavLink>
-                                            <NavLink to="/profile/" className="dropdown-item" >Thiết kế web</NavLink>
+                                            <NavLink to="/profile/Design" className="dropdown-item" >Thiết kế web</NavLink>
                                             <NavLink to="/profile/Didong" className="dropdown-item" >Lập trình di động</NavLink>
 
                                         </div>

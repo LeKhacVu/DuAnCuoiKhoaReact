@@ -15,7 +15,7 @@ class Profile_Elearning extends Component {
             <div>
                 <div className="profile">
                     <div className="container">
-                        <h3 className="title-profile ">LẬP TRÌNH FRONT-END</h3>
+                        <h3 className="title-profile ">HỌC LẬP TRÌNH VỚI CYBERSOFT</h3>
                     </div>
 
                 </div>
